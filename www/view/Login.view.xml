@@ -1,0 +1,47 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" 
+          controllerName="myreportlabor.controller.Login" 
+		  xmlns="sap.m" 
+		  xmlns:layout="sap.ui.commons.layout">
+    <App id="ControllerBase">
+    <Page showHeader="true" title="My Reportlabor" showFooter="true" showNavButton="false" enableScrolling="false" class="myBackgroundStyle" >
+			<content>
+				<FlexBox
+					height="100%"
+					alignItems="End"
+					justifyContent="End"
+					>
+					<items>
+						<VBox class="opacBackCustom" backgroundDesign="Solid" alignItems="Center" justifyContent="Center">						
+							
+							<Input id="user" class="sapUiLargeMarginTop" width="300px" placeholder="Usuário" maxLength="200" type="Text" value=""/>
+							<Input id="password" width="300px" placeholder="Senha" maxLength="200" type="Password" value=""/>
+							<HBox alignItems="Center" justifyContent="Center" width="100%">
+								<Button icon="sap-icon://visits" 
+										id="login-btn" 
+										width="200px" 
+										text="Entrar" 
+										type="Emphasized" 
+										iconFirst="true" 
+										enabled="true" 
+										visible="true" 
+										iconDensityAware="false" 
+										press="onLogin" 
+										text-align="center" 
+										class="sapUiLargeMarginTop"/>		
+							</HBox>
+
+						</VBox>
+					</items>
+				</FlexBox>
+			</content>
+        <footer>
+            <OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">
+                <content>
+                    <ToolbarSpacer width=""/>
+                    <Button icon="sap-icon://action-settings" press="onConfiguration" />
+                </content>
+            </OverflowToolbar>
+        </footer>
+    </Page>
+    </App>
+</mvc:View>

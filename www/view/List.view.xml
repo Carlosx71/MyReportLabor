@@ -1,0 +1,30 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" 
+          controllerName="myreportlabor.controller.List" 
+		  xmlns="sap.m" 
+		  xmlns:tnt="sap.tnt" 
+		  xmlns:layout="sap.ui.commons.layout">
+    <Page showHeader="true" title="Lista de Atividades" showFooter="true" showNavButton="false" enableScrolling="false">
+		<ScrollContainer height="100%" width="100%" vertical="true" focusable="true">
+			<List id="listContent" itemPress="onList" items="{path:'modelAsset>/member'}" mode="SingleSelectMaster" width="100%">
+				<items>
+					<ObjectListItem class="miObjectListItem" title="" icon="sap-icon://activity-items" type="Navigation"	number="{modelAsset>assetnum}"	numberUnit="{modelAsset>location/description}"	intro="{modelAsset>description}">
+						<markers>
+							<ObjectMarker type="Flagged" class="listError" visible="true"/>
+							<ObjectMarker type="Unsaved" visibility="IconOnly" visible="true"/>
+						</markers>
+					</ObjectListItem>
+				</items>
+			</List>
+		</ScrollContainer>			
+		<footer>
+			<OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">
+				<content>
+					<ToolbarSpacer width=""/>
+					<Button icon="sap-icon://log" press="onLogout" />
+					<Button icon="sap-icon://drill-down" press="onDownload" />
+					<Button icon="sap-icon://drill-up" press="" /> 
+				</content>
+			</OverflowToolbar>
+		</footer>
+    </Page>
+</mvc:View>

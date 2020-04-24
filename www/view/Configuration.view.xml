@@ -1,0 +1,28 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" 
+          controllerName="myreportlabor.controller.Configuration" 
+		  xmlns="sap.m" 
+		  xmlns:layout="sap.ui.commons.layout">
+		  
+	<Page showHeader="true" title="Configuration" showFooter="true" navButtonPress="_onPageNavButtonPress" showNavButton="true" enableScrolling="false">
+        <content>
+			<FlexBox height="100%" alignItems="Center" justifyContent="Start">
+				<VBox width="100%" class="opacBackCustom" backgroundDesign="Solid" alignItems="Center" justifyContent="Start">
+					<items>
+						<Label text=""/>
+						<Label text=""/>
+						<Input placeholder="https://server/maximo" id="endpoint" width="300px" maxLength="200" type="Text" value=""/>					
+					</items>
+				</VBox>
+			</FlexBox>	
+        </content>
+		<footer>
+			<OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">
+				<content>
+					<ToolbarSpacer width=""/>
+					<Button icon="sap-icon://save" press="onSave" />
+					<Button icon="sap-icon://sys-cancel-2" press="onCancel" /> 
+				</content>
+			</OverflowToolbar>
+		</footer>
+    </Page>
+</mvc:View>
