@@ -7,11 +7,11 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "maxinst.com.Inspection"
-    },
     "cordova-plugin-camera": {
-      "PACKAGE_NAME": "maxinst.com.Inspection"
+      "PACKAGE_NAME": "maxinst.com.myreportlabor"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "maxinst.com.myreportlabor"
     }
   },
   "dependent_plugins": {}

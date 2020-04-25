@@ -37,13 +37,37 @@ var maxinstlib = (function() {
 	};		
 
 	function getRequest(url,token) {		
-
 		var http;
 		var _return;
+		console.log(token)
+		//fetch(url, {
+		//	method: 'GET',
+		//	//mode: 'no-cors', // pode ser cors ou basic(default)
+		//	//redirect: 'follow',
+		//	headers: new Headers({
+		//	  //'Content-Type': 'application/json',
+		//	  'maxauth': token
+		//	})
+		//}).then((response) => {
+		//		console.log(response.status)
+		//		if (response.status == 200){
+		//			//throw new Error('Olha a merda do error e o status' + response.status)
+		//			console.log(response.text)
+		//			_return = response.text
+		//		} else {
+		//			_return = response.statusText
+		//		}
+		//
+		//}).catch((error) => {
+		//	console.error(error.message)
+		//});
+
 		try {
 			http = new XMLHttpRequest();                
 			http.open('GET', url, false);
-			if(token!=null) http.setRequestHeader('maxauth', token);
+			if(token!=null) {
+				http.setRequestHeader('maxauth', token)
+			};
 			http.onload = function (e) {
 				if (http.readyState === 4) {
 					if (http.status === 200) {
@@ -58,14 +82,13 @@ var maxinstlib = (function() {
 			};
 			
 			http.send();
-			   
 			return _return;
-
+		
 		}
 		catch(e) {
 			console.log(e);
 		}
-
+	
 	}
 	
 	function setRequest(url,token,args) {
